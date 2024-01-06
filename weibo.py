@@ -427,8 +427,8 @@ class Weibo(object):
 
     def get_long_weibo(self, id):
         """获取长微博"""
-        for i in range(5):
-            url = "https://m.weibo.cn/detail/%s" % id
+        for i in range(1):
+            url = "https://m.weibo.cn/detail/%s?display=0&retcode=6102" % id
             html = requests.get(url, headers=self.headers, verify=False).text
             html = html[html.find('"status":') :]
             html = html[: html.rfind('"call"')]
