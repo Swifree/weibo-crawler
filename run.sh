@@ -1,0 +1,1 @@
+nohup bash real_run.sh > run.log &
